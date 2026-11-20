@@ -1,0 +1,114 @@
+{
+ "counts": {
+  "films": 21,
+  "series": 22,
+  "shorts": 2978,
+  "television": 468
+ },
+ "files": {
+  "films.json": {
+   "bytes": 11272,
+   "section": "films",
+   "sha256": "1698e699cfe90722dbba27824657c778af53dfde311f2fca866da1b25d86b00c"
+  },
+  "series.json": {
+   "bytes": 19103,
+   "section": "series",
+   "sha256": "04a09fe69bc2e085e4d09098f63359429f27eaac0d3ef84e2ea750246f5b9ac8"
+  },
+  "shorts-0.json": {
+   "bytes": 116720,
+   "section": "shorts",
+   "sha256": "1a03a9b05fee7d50959ebce4c498163f6ca0b67c5ce672184a9142506edc5fb8"
+  },
+  "shorts-1.json": {
+   "bytes": 120418,
+   "section": "shorts",
+   "sha256": "37b205dda4e623343d60e8ae3a93c8d584f9ebfec9cbb4015d240595dcb701d9"
+  },
+  "shorts-2.json": {
+   "bytes": 113986,
+   "section": "shorts",
+   "sha256": "4bdf1a6491ab8831fa2b7625a557db21f542c4ce0e52e49bbc3261acd6c76932"
+  },
+  "shorts-3.json": {
+   "bytes": 125602,
+   "section": "shorts",
+   "sha256": "097872f340d2a8cb9e11fcb517988d26db072a7a611100bb716dc80053ce821e"
+  },
+  "shorts-4.json": {
+   "bytes": 116484,
+   "section": "shorts",
+   "sha256": "de5383841b640bc1cc766cb99f3812afb04a6343ae1de111cd83698b527f3138"
+  },
+  "shorts-5.json": {
+   "bytes": 127985,
+   "section": "shorts",
+   "sha256": "68b86d28f6872ca9077fed72cd3eb0595cb5d18bf72629223c70904b21eac141"
+  },
+  "shorts-6.json": {
+   "bytes": 113098,
+   "section": "shorts",
+   "sha256": "9c6663ee1b381a640ec53e5136646feeacaa2ca9000e5292670ad10939e68f57"
+  },
+  "shorts-7.json": {
+   "bytes": 121823,
+   "section": "shorts",
+   "sha256": "631ea8c11d123e8defea37dc441281ea212cb1ebb20c18a9d520d7500f28ea01"
+  },
+  "shorts-8.json": {
+   "bytes": 117559,
+   "section": "shorts",
+   "sha256": "cc18eb25bd9a65fcecb30a584bdb5f5c8aeb8b5123d41e5e3a42cc5426a45bdc"
+  },
+  "shorts-9.json": {
+   "bytes": 106688,
+   "section": "shorts",
+   "sha256": "8d59fd6eba3cfda06777cb4a4e31c7f4e63fef9ddbb12ecd78346b0d36882dd6"
+  },
+  "shorts-a.json": {
+   "bytes": 107040,
+   "section": "shorts",
+   "sha256": "43e55686b392a8afe0eaab039dbcd937413d357679a992632b3cc0003dc865d3"
+  },
+  "shorts-b.json": {
+   "bytes": 110929,
+   "section": "shorts",
+   "sha256": "d050c2fc91db281e4513eee12478095deb459f6be756caa218fa35185b7fb723"
+  },
+  "shorts-c.json": {
+   "bytes": 113477,
+   "section": "shorts",
+   "sha256": "ce53a0de213353d8b33af7082d598f9fd66055f3054f50c1100050f20e5e79e9"
+  },
+  "shorts-d.json": {
+   "bytes": 103943,
+   "section": "shorts",
+   "sha256": "6667c5e90f51881edc832b1b96277138966aef78b8f98ee10980901ff144a058"
+  },
+  "shorts-e.json": {
+   "bytes": 119316,
+   "section": "shorts",
+   "sha256": "3ee0afd747b0f9dab33b477ec9bc40f1158dede641bacf50a43ef2cef7516b7c"
+  },
+  "shorts-f.json": {
+   "bytes": 110837,
+   "section": "shorts",
+   "sha256": "47400dad8b31a6f17a1e9587d0d715672ef26555e4ec823834eefe714c3163ca"
+  },
+  "television.json": {
+   "bytes": 176213,
+   "section": "television",
+   "sha256": "784c8e0836f0aaa2f5760639ffe9423885a3744f496f49a2445cbb0689af4427"
+  }
+ },
+ "generated_at": "2026-11-17T08:23:05.535327+00:00",
+ "revision": "ed27a76c78f2f02e92c4dc77eee6ae021c0ef2d0debde7c0407bb1320de01654",
+ "schema": 1,
+ "sequence": 3,
+ "territories": [
+  "CH",
+  "FR"
+ ],
+ "worldwide_clearance": false
+}

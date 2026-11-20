@@ -1,0 +1,54 @@
+#!/bin/sh
+# Controls every commit about to leave, not the work tree: a forbidden file committed and then removed would
+# leave all the same, and nothing can be taken back from a public repository.
+set -eu
+GIT_NO_REPLACE_OBJECTS=1; export GIT_NO_REPLACE_OBJECTS  # the objects that leave are judged, not a local replacement
+remote="$1"
+top=$(git rev-parse --show-toplevel)
+tmp=$(mktemp -d)
+trap 'rm -rf "$tmp"' EXIT
+refuse() { echo "envoi refusé : $1" >&2; exit 1; }
+control() {  # the control this commit carries judges its export, against one parent when a reference is given
+  python3 -I -B "$tmp/tree/scripts/check.py" --tree "$tmp/tree" "$@" </dev/null >&2 || refuse "commit $commit"
+}
+private() {  # the maintainer's own command, when CATALOGUE_PRIVATE_CHECK is set: it receives one folder
+  [ -z "${CATALOGUE_PRIVATE_CHECK:-}" ] || sh -c "$CATALOGUE_PRIVATE_CHECK \"\$1\"" private "$1" </dev/null
+}
+while read -r local_ref local_sha remote_ref remote_sha; do
+  case "$local_sha" in *[!0]*) ;; *) continue ;; esac  # a deleted branch sends nothing
+  git rev-parse -q --verify "$local_sha^{commit}" >/dev/null || refuse "$local_ref ne désigne pas un commit"
+  if [ -n "${remote_sha##*[!0]*}" ]; then  # a branch the remote does not have yet
+    commits=$(git rev-list --reverse "$local_sha" --not "--remotes=$remote") || refuse "liste des commits illisible"
+  else
+    # Commits are judged against their parents: that holds only if the push carries on from what the remote has.
+    # A push that would discard commits of the remote could bring back a withdrawn title or a lower sequence number.
+    git merge-base --is-ancestor "$remote_sha" "$local_sha" 2>/dev/null ||
+      refuse "$remote_ref : cet envoi écarterait des commits du distant (git fetch, puis fusionner ou rebaser)"
+    commits=$(git rev-list --reverse "$remote_sha..$local_sha") || refuse "liste des commits illisible"
+  fi
+  for commit in $commits; do
+    rm -rf "$tmp/tree" "$tmp/index"
+    mkdir "$tmp/tree"
+    # A temporary index exports every tracked file; `git archive` would skip those marked export-ignore.
+    # The bytes of the commit are exported: no end-of-line conversion, whatever this clone is set to.
+    GIT_INDEX_FILE="$tmp/index" git read-tree "$commit"
+    GIT_INDEX_FILE="$tmp/index" git -c core.autocrlf=false -c core.eol=lf checkout-index --all --prefix="$tmp/tree/"
+    # The control leaves these build outputs unread: in a commit they would leave unseen.
+    if [ -e "$tmp/tree/publication" ] || [ -L "$tmp/tree/publication" ] ||
+       [ -n "$(find "$tmp/tree" -name __pycache__)" ]; then
+      refuse "commit $commit (publication/ ou __pycache__/ suivi par git)"
+    fi
+    parents=$(git rev-list --parents -n 1 "$commit") || refuse "commit $commit (parents illisibles)"
+    parents=${parents#"$commit"}
+    [ -n "$parents" ] || control
+    for parent in $parents; do control --base "$parent"; done  # a merge is judged against each of its parents
+    private "$tmp/tree" || refuse "commit $commit (contrôle privé)"
+    # A commit that changes the control is judged by its own rules: it is named, to be read by hand.
+    if [ -n "$parents" ]; then touched=$(git diff-tree --name-only -r "$commit^" "$commit" -- scripts .githooks)
+    else touched=$(git diff-tree --no-commit-id --name-only -r --root "$commit" -- scripts .githooks); fi
+    [ -z "$touched" ] || echo "à relire à la main : le commit $commit retouche scripts/ ou .githooks/" >&2
+  done
+done
+[ -n "${CATALOGUE_PRIVATE_CHECK:-}" ] ||
+  echo "avis : envoi sans contrôle privé (CATALOGUE_PRIVATE_CHECK non définie)" >&2
+private "$top" || refuse "contrôle privé du dépôt"

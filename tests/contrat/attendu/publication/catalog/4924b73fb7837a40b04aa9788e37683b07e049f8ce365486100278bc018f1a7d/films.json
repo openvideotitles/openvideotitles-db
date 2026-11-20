@@ -1,0 +1,4 @@
+{"schema":1,"section":"films","items":[
+{"country":"FR","duration_seconds":5400,"id":"exemple:film-direct","languages":["fr"],"section":"films","sources":[{"credits":["« Le Film d’essai » (1921), Jeanne Exemple. Domaine public. Copie : Archive Exemple."],"expires_at":null,"licence_references":["PDM https://creativecommons.org/publicdomain/mark/1.0/"],"mode":"direct","territories":["CH","FR"],"uri":"https://media.example/film-essai.mp4"}],"title":"Le Film d’essai"},
+{"country":"NL","duration_seconds":596,"id":"exemple:film-page","languages":[],"section":"films","sources":[{"credits":["« Film à page seule » — © Studio Exemple — licence CC BY 3.0"],"expires_at":null,"licence_references":["CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/"],"mode":"official_link","territories":["CH","FR"],"uri":"https://studio.example/film"}],"title":"Film à page seule"}
+]}

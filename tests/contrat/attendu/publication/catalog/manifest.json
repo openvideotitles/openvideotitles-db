@@ -1,0 +1,54 @@
+{
+ "counts": {
+  "films": 2,
+  "series": 1,
+  "shorts": 4,
+  "television": 1
+ },
+ "files": {
+  "films.json": {
+   "bytes": 886,
+   "section": "films",
+   "sha256": "4511ae53fd71d743421629d97f3861f5b21115c275a7c5b2e232f7939f4c8d6d"
+  },
+  "series.json": {
+   "bytes": 502,
+   "section": "series",
+   "sha256": "3c0428637819755b98993171b16913c1a1fea75d9ce22470ea3d33475e741ea5"
+  },
+  "shorts-0.json": {
+   "bytes": 518,
+   "section": "shorts",
+   "sha256": "eedc635a48fb5becbdcbac67d063bf904eb60af2bc9879365d1b5c7de4f3455f"
+  },
+  "shorts-3.json": {
+   "bytes": 477,
+   "section": "shorts",
+   "sha256": "0b0afd6f01a5c971dad18bac7b9a4afa8dc11bde5bab7657ee5c80c7be80bb3f"
+  },
+  "shorts-8.json": {
+   "bytes": 792,
+   "section": "shorts",
+   "sha256": "99e06136de6b6c7002e794e2bdb534a67f1de034d5b71e27a96595fd59a15a43"
+  },
+  "shorts-a.json": {
+   "bytes": 478,
+   "section": "shorts",
+   "sha256": "7e0a516800a75c95b9137782e46da19b6f30139826b42d324d6bec8ab1f4e924"
+  },
+  "television.json": {
+   "bytes": 413,
+   "section": "television",
+   "sha256": "8387e59ab6e48ec2b102219fa61ebf953d23506394aeeed218e198763e3a9c68"
+  }
+ },
+ "generated_at": "2026-01-01T00:00:00+00:00",
+ "revision": "4924b73fb7837a40b04aa9788e37683b07e049f8ce365486100278bc018f1a7d",
+ "schema": 1,
+ "sequence": 1,
+ "territories": [
+  "CH",
+  "FR"
+ ],
+ "worldwide_clearance": false
+}

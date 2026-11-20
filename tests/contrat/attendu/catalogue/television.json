@@ -1,0 +1,3 @@
+{"schema":1,"section":"television","items":[
+{"country":"CH","duration_seconds":null,"id":"ExempleTV.ch","languages":["fra"],"section":"television","sources":[{"credits":["Exemple TV — Société Exemple SA (direct sur tv.example)"],"expires_at":null,"licence_references":["https://tv.example/direct"],"mode":"official_link","territories":["CH","FR"],"uri":"https://tv.example/direct"}],"title":"Exemple TV"}
+]}

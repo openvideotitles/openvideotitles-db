@@ -1,0 +1,282 @@
+{
+ "schema_version": 1,
+ "generated_at": "2026-01-01T00:00:00+00:00",
+ "territories": [
+  "CH",
+  "FR"
+ ],
+ "worldwide_clearance": false,
+ "counts": {
+  "television": 1,
+  "films": 2,
+  "series": 1,
+  "shorts": 5
+ },
+ "publication_state": "READY",
+ "items": [
+  {
+   "id": "ExempleTV.ch",
+   "section": "television",
+   "title": "Exemple TV",
+   "country": "CH",
+   "languages": [
+    "fra"
+   ],
+   "duration_seconds": null,
+   "sources": [
+    {
+     "mode": "official_link",
+     "uri": "https://tv.example/direct",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "Exemple TV — Société Exemple SA (direct sur tv.example)"
+     ],
+     "licence_references": [
+      "https://tv.example/direct"
+     ],
+     "expires_at": null
+    }
+   ],
+   "assets": []
+  },
+  {
+   "id": "exemple:film-direct",
+   "section": "films",
+   "title": "Le Film d’essai",
+   "country": "FR",
+   "languages": [
+    "fr"
+   ],
+   "duration_seconds": 5400,
+   "sources": [
+    {
+     "mode": "direct",
+     "uri": "https://media.example/film-essai.mp4",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Le Film d’essai » (1921), Jeanne Exemple. Domaine public. Copie : Archive Exemple."
+     ],
+     "licence_references": [
+      "PDM https://creativecommons.org/publicdomain/mark/1.0/"
+     ],
+     "expires_at": null
+    }
+   ],
+   "assets": []
+  },
+  {
+   "id": "exemple:film-page",
+   "section": "films",
+   "title": "Film à page seule",
+   "country": "NL",
+   "languages": [],
+   "duration_seconds": 596,
+   "sources": [
+    {
+     "mode": "official_link",
+     "uri": "https://studio.example/film",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Film à page seule » — © Studio Exemple — licence CC BY 3.0"
+     ],
+     "licence_references": [
+      "CC-BY-3.0 https://creativecommons.org/licenses/by/3.0/"
+     ],
+     "expires_at": null
+    }
+   ],
+   "assets": []
+  },
+  {
+   "id": "exemple:episode-1",
+   "section": "series",
+   "title": "Reportage d’essai, volet 2",
+   "country": null,
+   "languages": [
+    "de"
+   ],
+   "duration_seconds": null,
+   "sources": [
+    {
+     "mode": "direct",
+     "uri": "https://media.example/reportage-2.webm",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Reportage d’essai, volet 2 » — Institut Exemple — CC BY-ND 3.0 DE"
+     ],
+     "licence_references": [
+      "CC-BY-ND-3.0-DE http://creativecommons.org/licenses/by-nd/3.0/de/ (marqué ND)"
+     ],
+     "expires_at": null
+    }
+   ],
+   "assets": []
+  },
+  {
+   "id": "exemple:court-deux-sources",
+   "section": "shorts",
+   "title": "Court à deux sources",
+   "country": "US",
+   "languages": [
+    "en"
+   ],
+   "duration_seconds": 228,
+   "sources": [
+    {
+     "mode": "direct",
+     "uri": "https://archive-a.example/court.mp4",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Court à deux sources » (1905). Domaine public. Copie : Bibliothèque Exemple."
+     ],
+     "licence_references": [
+      "PDM https://creativecommons.org/publicdomain/mark/1.0/"
+     ],
+     "expires_at": null
+    },
+    {
+     "mode": "direct",
+     "uri": "https://archive-b.example/download/court.mp4",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Court à deux sources » (1905). Domaine public. Copie : Archive Exemple."
+     ],
+     "licence_references": [
+      "PDM https://creativecommons.org/publicdomain/mark/1.0/"
+     ],
+     "expires_at": "2099-12-31T00:00:00+00:00"
+    }
+   ],
+   "assets": []
+  },
+  {
+   "id": "exemple:court-page-http",
+   "section": "shorts",
+   "title": "Court à page seule",
+   "country": null,
+   "languages": [],
+   "duration_seconds": 61,
+   "sources": [
+    {
+     "mode": "official_link",
+     "uri": "http://musee.example/court",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Court à page seule » — Musée Exemple — CC BY-NC-SA 4.0"
+     ],
+     "licence_references": [
+      "CC-BY-NC-SA-4.0 https://creativecommons.org/licenses/by-nc-sa/4.0/ (marqué NC)"
+     ],
+     "expires_at": null
+    }
+   ],
+   "assets": []
+  },
+  {
+   "id": "exemple:court-sans-extension",
+   "section": "shorts",
+   "title": "Court sans extension",
+   "country": "CA",
+   "languages": [
+    "fr",
+    "en"
+   ],
+   "duration_seconds": 90,
+   "sources": [
+    {
+     "mode": "direct",
+     "uri": "https://media.example/stream/court-3",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Court sans extension » — Office Exemple"
+     ],
+     "licence_references": [
+      "domaine public (pd_reason) ; licence affichée par la source : CC0-1.0 http://creativecommons.org/publicdomain/zero/1.0/"
+     ],
+     "expires_at": null
+    }
+   ],
+   "assets": []
+  },
+  {
+   "id": "exemple:court-http-direct",
+   "section": "shorts",
+   "title": "Court dont le fichier est en http",
+   "country": "ES",
+   "languages": [
+    "es"
+   ],
+   "duration_seconds": 45,
+   "sources": [
+    {
+     "mode": "direct",
+     "uri": "http://vieux.example/court.mp4",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Court dont le fichier est en http » — Fonds Exemple — CC BY 4.0"
+     ],
+     "licence_references": [
+      "CC-BY-4.0 https://creativecommons.org/licenses/by/4.0/"
+     ],
+     "expires_at": null
+    }
+   ],
+   "assets": []
+  },
+  {
+   "id": "exemple:court-retire",
+   "section": "shorts",
+   "title": "Court retiré",
+   "country": "FR",
+   "languages": [
+    "fr"
+   ],
+   "duration_seconds": 30,
+   "sources": [
+    {
+     "mode": "direct",
+     "uri": "https://media.example/retire.mp4",
+     "territories": [
+      "CH",
+      "FR"
+     ],
+     "credits": [
+      "« Court retiré » — Fonds Exemple"
+     ],
+     "licence_references": [
+      "PDM https://creativecommons.org/publicdomain/mark/1.0/"
+     ],
+     "expires_at": null
+    }
+   ],
+   "assets": []
+  }
+ ]
+}
